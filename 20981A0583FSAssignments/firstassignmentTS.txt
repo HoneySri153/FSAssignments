@@ -1,0 +1,76 @@
+//Declare variables of the following types and assign appropriate values:
+
+let a:number=34;
+let b:string="Practice";
+let c:boolean=true;
+let example:number[]=[1,2,5,6];
+let ex:[string,number]=["Divya",3];
+enum weekday{
+  Monday,
+  Tuesday,
+  Wednesday,
+  Thursday,
+  Friday,Saturday,Sunday};
+
+  console.log(a,b,c);
+  console.log(example,ex,weekday);
+
+
+//Add function that takes two parameters of type number and returns their sum:
+  function add(a:number,b:number){
+    return a+b;
+  }
+  let res=add(2,5);
+  console.log(res);
+
+
+//Capitalize function that takes a parameter of type string and returns the capitalized version of it:
+  function capitalize(a:string){
+    return a.toUpperCase();
+  }
+  let result=capitalize("divya");
+  console.log(result);
+
+  
+  
+  //interface called Person with the following properties:  name of type string  age of type number  email of type string:
+  interface Person{name:string,age:number,email:string};
+  
+  const user:Person={     //Variable user of type Person and initialize it with sample data
+    name:"Divya",
+    age:20,
+    email:"20981a0583@raghuenggcollege.in"
+  };
+  console.log(user.email);
+
+
+
+  //Create a class called Car with the following properties:  make of type string  model of type string  year of type number:
+  class car{
+    private make:string;
+    private model:string;
+    private year:number;
+
+    public constructor(make:string,model:string,year:number){
+        this.make=make;
+        this.model=model;
+        this.year=year;
+    }
+
+    public displayInfo(){           //Method displayInfo which logs the information about the car
+         console.log(this.make);
+         console.log(this.model);
+         console.log(this.year);
+    }
+
+  }
+  const p=new car("Toyota","ZXI",2003);
+  p.displayInfo();
+
+
+  //Generic function called reverseArray that takes an array of any type and returns a reversed version of that array:
+  function reverse<s,t,u,v>(v1:s,v2:t,v3:u,v4:v):[v,u,t,s]{
+    return [v4,v3,v2,v1];
+  }
+  console.log(reverse<string,boolean,number,string>("Hello",false,4,"p"));
+  
